@@ -1,8 +1,18 @@
 #root {
   max-width: 1280px;
+  width: 100%;
+  height: 100vh;
+  line-height: 1.5;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .card {
@@ -12,5 +22,33 @@
 button {
   margin-inline: 1em;
   min-width: 7em;
+}
+
+nav {
+  display: flex;
+  border-bottom: 2px solid #575757;
+  position: sticky;
+  top: 0px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+nav li {
+  float: inline-start;
+  padding: 1rem;
+}
+
+nav li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+nav li:hover {
+  background-color: #575858;
 }
 
