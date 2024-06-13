@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import HomeView from "../views/HomeView.jsx";
+import HomeView from "../components/FrontPageView.jsx";
 
-export default function Home(){
+const Home = () => {
   const [count, setCount] = useState(Number(sessionStorage.getItem("count")) || 0)
 
   useEffect(() => {
@@ -15,3 +15,5 @@ export default function Home(){
     /> 
   )
 }
+
+export default Home

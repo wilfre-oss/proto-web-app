@@ -1,29 +1,26 @@
 import { useEffect, useState } from 'react'
-import './App.css'
+import './styles/App.css'
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom'
-import Home from './presenters/Home.jsx'
-import NotFound from './views/NotFound.jsx'
+import Home from './presenters/FrontPage.jsx'
 import Navbar from './components/Navbar.jsx'
+import NotFoundPage from './components/NotFoundPage.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+    <>
     <Route element={<Navbar />}>
       <Route path="/" element={<Home />}>
         {/** App Routes goes here */}
       </Route>
-      <Route path="*" element={<NotFound />}/>
+    <Route path="*" element={<NotFoundPage />} />
     </Route>
+    </>
   )
 )
 
 
-function App() {
-  const [count, setCount] = useState(Number(sessionStorage.getItem("count")))
-
-  useEffect(() => {
-    sessionStorage.setItem("count", count)
-  }, [count])
-
+const App = () => {
+  
   return (
     <RouterProvider 
       router={router}

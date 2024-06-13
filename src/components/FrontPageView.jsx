@@ -1,5 +1,5 @@
 
-export default function HomeView({count, setCount}){
+const HomeView = ({count, setCount}) => {
   return (
     <>
       <h1>Nothing here</h1>
@@ -14,3 +14,5 @@ export default function HomeView({count, setCount}){
     </>
   )
 }
+
+export default HomeView
