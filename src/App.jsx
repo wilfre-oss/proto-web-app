@@ -1,25 +1,31 @@
 import { useEffect, useState } from 'react'
-import './App.css'
+import './styles/App.css'
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom'
+import Home from './presenters/FrontPage.jsx'
+import Navbar from './components/Navbar.jsx'
+import NotFoundPage from './components/NotFoundPage.jsx'
 
-function App() {
-  const [count, setCount] = useState(Number(sessionStorage.getItem("count")) || 0)
-
-  useEffect(() => {
-    sessionStorage.setItem("count", count)
-  }, [count])
-
-  return (
+const router = createBrowserRouter(
+  createRoutesFromElements(
     <>
-      <h1>Nothing here</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Count is {count}
-        </button>
-        <button onClick={() => setCount(0)}>
-            Reset
-        </button>
-      </div>
+    <Route element={<Navbar />}>
+      <Route path="/" element={<Home />}>
+        {/** App Routes goes here */}
+      </Route>
+    <Route path="*" element={<NotFoundPage />} />
+    </Route>
     </>
+  )
+)
+
+
+const App = () => {
+  
+  return (
+    <RouterProvider 
+      router={router}
+      fallbackElement={<h1>Loading...</h1>}
+    />
   )
 }
 

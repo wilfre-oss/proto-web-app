@@ -1,6 +1,14 @@
+#root {
+  max-width: 1280px;
+  width: 100%;
+  height: 100vh;
+  line-height: 1.5;
+  margin: 0 auto;
+  text-align: center;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -24,10 +32,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -59,10 +65,51 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.card {
+  padding: 2em;
+}
+
+button {
+  margin-inline: 1em;
+  min-width: 7em;
+}
+
+nav {
+  display: flex;
+  border-bottom: 2px solid #575757;
+  position: sticky;
+  top: 0px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+nav li {
+  float: inline-start;
+  padding: 1rem;
+}
+
+nav li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+nav li:hover {
+  background-color: #575858;
+}
+
