@@ -9,16 +9,16 @@ import {
 import Home from "./presenters/FrontPage.jsx";
 import NotFoundPage from "./components/NotFoundPage.jsx";
 import AppLayout from "./components/AppLayout.jsx";
+import Category from "./presenters/Category.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route element={<AppLayout />}>
-        <Route path="/" element={<Home />}>
-          {/** App Routes goes here */}
-        </Route>
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/:category" element={<Category />} /> 
       </Route>
+      <Route path="*" element={<NotFoundPage />} />
     </>
   )
 );
