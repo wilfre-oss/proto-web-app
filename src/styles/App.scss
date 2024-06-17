@@ -1,0 +1,86 @@
+#root {
+  width: 100%;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.navbar {
+  .logo {
+    font-weight: 700;
+    color: white;
+    padding: 0;
+    font-size: 3rem;
+    font-family: "Kadwa", serif;
+    font-style: normal;
+    line-height: 0;
+    text-wrap: nowrap;
+    flex: 1;
+  }
+  a {
+    text-decoration: none;
+  }
+  .searchbar {
+    height: 1.75rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    border: none;
+    input {
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      background-color: white;
+      border: none;
+      width: 100%;
+    }
+    button {
+      height: 1.75rem;
+      width: 1.75rem;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      border: none;
+      background-color: white;
+    }
+  }
+  ul {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    list-style-type: none;
+    gap: 1em;
+    padding: 0;
+    height: 100%;
+    li {
+      height: 100%;
+      a {
+        height: 100%;
+        border-radius: 50%;
+        padding: 5px;
+        border: 1px solid black;
+        display: flex;
+      }
+    }
+  }
+  background-color: #813939;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4em 0 4em;
+}
