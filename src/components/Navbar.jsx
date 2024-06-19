@@ -5,9 +5,11 @@ import cart from "../assets/cart.png";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link to="/" className="logo">
+    <span className="logo">
+      <Link to="/">
         FAKE-MART
       </Link>
+    </span>
       <Searchbar />
       <ul>
         <li>

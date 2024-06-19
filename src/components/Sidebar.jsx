@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const Sidebar = () => {
-  const [categories, setCategories] = useState(['hello', 'world', 'thisisverylong'])
+  const [categories, setCategories] = useState(null)
 
   useEffect(() => {
     const controller = new AbortController;
@@ -14,19 +14,25 @@ const Sidebar = () => {
     return () => controller.abort()
   }, [])
 
-  const renderCategories = () => {
-    return (
+  const renderCategories = ({categories}) => {
+    return categories ? (
       <ul> 
-      {categories.map((category) => {
-        return <li key={category}><Link to={`/${category}`}>{category}</Link></li>
-      })}
+      {categories.map(category => 
+        <li key={category}>
+          <Link to={`/${category}`}>
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </Link>
+        </li>
+      )}
       </ul>  
+    ) : (
+      <p>Loading...</p>
     )
   }
 
   return (
   <nav className="sidebar">
-    {renderCategories()}
+    {renderCategories({categories})}
   </nav>
   );
 };
