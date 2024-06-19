@@ -3,7 +3,8 @@
   font-weight: 400;
   
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  //color: rgba(255, 255, 255, 0.87);
+  color: #242424;
   background-color: #dfdfdf;
   
   font-synthesis: none;
@@ -128,11 +129,16 @@ body {
       font-weight: 525;
     }
     li {
-      padding-inline: 1ch;
+      padding-right: 2ch;
     }
     li:hover {
       background-color: #ffb7a5;
       border-radius: 10px;
+      padding-inline: 1ch;
+      transition: padding-inline .25s ;
     }
   }
 }
+
+@import 
+  'spinners'
