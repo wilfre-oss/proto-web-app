@@ -1,4 +1,22 @@
+.small-spinner {
+  width: 12px;
+  height: 12px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #335C67;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
 .spinner {
+  width: 25px;
+  height: 25px;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #335C67;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.big-spinner {
   width: 50px;
   height: 50px;
   border: 32px solid #f3f3f3;
@@ -7,23 +25,7 @@
   animation: spin 2s linear infinite;
 }
 
-.big-spinner {
-  width: 100px;
-  height: 100px;
-  border: 64px solid #f3f3f3;
-  border-top: 64px solid #335C67;
-  border-radius: 50%;
-  animation: spin 2s linear infinite;
-}
 
-.small-spinner {
-  width: 25px;
-  height: 25px;
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #335C67;
-  border-radius: 50%;
-  animation: spin 2s linear infinite;
-}
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
